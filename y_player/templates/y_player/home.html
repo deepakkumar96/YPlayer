@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YPlay</title>
+    <link href="{% static 'y_player/css/base_cass.css' %}"/>
+    <script src="{% static 'y_player/js/angular.js' %}"></script>
+    <script src="{% static 'y_player/js/app.js' %}"></script>
+</head>
+<body ng-app="YPlayer">
+
+<div ng-controller="searchController">
+    <input type="text" name="txt_input" ng-model="input" ng-keyup="search()">
+    <button ng-click="search()">Click</button>
+    <div>Title : <input type="text" ng-model="title" value="scala" /></div>
+    <div>Video Url : <input type="text" ng-model="video_url" /></div>
+
+    <iframe src="" id="video_frame"></iframe>
+
+</div>
+
+</body>
+</html>
